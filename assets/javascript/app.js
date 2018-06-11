@@ -51,7 +51,49 @@ const myQuestions = [
     },
     correctAnswer: "b"
   },
-
+  {
+    question: "The dingo is a type of feral dog native to what country?",
+    answers: {
+      a: "Australia",
+      b: "Asia",
+      c: "North America",
+    },
+    correctAnswer: "a"
+  },
+  {
+    question: "Stratus, Cirrus and Cumulus are types of what?",
+    answers: {
+      a: "Sand",
+      b: "Fossils",
+      c: "Clouds",
+    },
+    correctAnswer: "c"
+  },
+  {
+    question: "What is the world's largest ocean?",
+    answers: {
+      a: "Atlantic",
+      b: "Pacific",
+      c: "Indian",
+    },
+    correctAnswer: "b"
+  },
+  {
+    question: "Lox, often served on a bagel, is a fillet of brined what?",
+    answers: {
+      a: "Squid",
+      b: "Salmon",
+      c: "Shrimp",
+    },
+  },
+  {
+    question: "What is the name of the Disney cartoon character that is the girlfriend of Donald Duck?",
+    answers: {
+      a: "Maria",
+      b: "Lucy",
+      c: "Daisy",
+    },
+  }  
 ];
 
 
