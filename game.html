@@ -1,3 +1,5 @@
+<!-- Students: Our work lies in the slideshow.js file. -->
+
 <!DOCTYPE html>
 
 <html lang="en-us">
@@ -5,9 +7,11 @@
   <head>
 
     <meta charset="UTF-8">
-    <title>Trivia Game</title>
+<!--    <meta http-equiv="refresh" content="90;url=../TriviaGame/triviaend.html" />  -->
+
+    <title>Slideshow</title>
     <link rel="stylesheet" type="text/css" href="../TriviaGame/assets/css/style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
     <style>
 
       body { /* Visual */ background: lightgrey;}
@@ -48,19 +52,34 @@
   </head>
 
   <body>
-
     <div id="title"><h1>TOTALLY TRIVIAL TRIVIA!</h1></div>
-    <div id="buttons">
-      <button id="start"><h1><a href="game.html">START</a></h1></button>
+    <div id="countdownExample">
+        <div class="values"></div>
     </div>
-    <div class="container2"></div>
 
+    <p id="demo"></p>
+
+    <p> Time Remaining:  <span id="countdowntimer">90 </span> Seconds</p>
+
+
+    <div class="quiz-container">
+      <div id="quiz"></div>  
+    </div>
+    <button id="submit">Submit Quiz</button>
+    <button id="resetgame"><a href="../TriviaGame/index.html">Reset Game</a></button>
+
+    <div id="results"></div>
 
     <!-- jQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!-- Script -->
     <script type="text/javascript" src="../TriviaGame/assets/javascript/app.js"></script>
+
+    <script type="text/javascript">
+
+    </script>
+
 
   </body>
 

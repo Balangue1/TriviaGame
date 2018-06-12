@@ -1,9 +1,25 @@
 $(document).ready(function(){
 
+  // Create countdown timer for 90 seconds, If timeleft=0 show results
+  var timeleft = 90;
+  var downloadTimer = setInterval(function(){
+  timeleft--;
+  document.getElementById("countdowntimer").textContent = timeleft;
+  console.log(timeleft)
+  
+    if(timeleft <= 0){
+    clearInterval(downloadTimer);
+    alert("Time is UP!");
+    showResults();
+
+  };
+  },1000);
 
 const quizContainer = document.getElementById('quiz');
 const resultsContainer = document.getElementById('results');
 const submitButton = document.getElementById('submit');
+
+// Create question bank with answers
 
 const myQuestions = [
   {
@@ -43,7 +59,7 @@ const myQuestions = [
     correctAnswer: "a"
   },
   {
-    question: "Who directed the Passion of the Christ?",
+    question: "Who directed The Passion of the Christ?",
     answers: {
       a: "Stan Lee",
       b: "Mel Gibson",
@@ -85,6 +101,7 @@ const myQuestions = [
       b: "Salmon",
       c: "Shrimp",
     },
+    correctAnswer: "b"
   },
   {
     question: "What is the name of the Disney cartoon character that is the girlfriend of Donald Duck?",
@@ -93,71 +110,15 @@ const myQuestions = [
       b: "Lucy",
       c: "Daisy",
     },
+    correctAnswer: "c"
   }  
 ];
-
-
-
-
-
-
-
-
 
 
 function buildQuiz(){
   // we'll need a place to store the HTML output
   const output = [];
 
-//  const myQuestions = [
-//    {
-//      question: "Which dog breed is noted for it's spotted coat?",
-//      answers: {
-//        a: "Chihuahua",
-//        b: "Dalmation",
-//        c: "Poodle"
-//      },
-//      correctAnswer: "b"
-//    },
-//    {
-//      question: "What animal's diet is made up almost entirely of eucalypti leaves?",
-//      answers: {
-//        a: "Panda",
-//        b: "Elephant",
-//        c: "Koala"
-//      },
-//      correctAnswer: "c"
-//    },
-//    {
-//      question: "Who was the first guest star on the Muppet Show?",
-//      answers: {
-//        a: "Lena Horne",
-//        b: "Alice Cooper",
-//        c: "John Denver",
-//      },
-//      correctAnswer: "a"
-//    },
-//    {
-//      question: "Who is the famous artist who painted Starry Night?",
-//      answers: {
-//        a: "Vincent van Gogh",
-//        b: "Donald Trump",
-//        c: "DaVinci"
-//      },
-//      correctAnswer: "a"
-//    },
-//    {
-//      question: "Who directed the Passion of the Christ?",
-//      answers: {
-//        a: "Stan Lee",
-//        b: "Mel Gibson",
-//        c: "Robert Redford"
-//      },
-//      correctAnswer: "b"
-//    },
-  
-//  ];
-  
   
   // for each question...
   myQuestions.forEach(
@@ -231,7 +192,11 @@ function showResults(){
     });
   
     // show number of correct answers out of total
-    resultsContainer.innerHTML = numCorrect + ' out of ' + myQuestions.length;
+    resultsContainer.innerHTML = numCorrect + ' correct out of ' + myQuestions.length;
+
+    // clear countdown timer
+    clearInterval(downloadTimer);
+
   };
 
 
